@@ -196,7 +196,7 @@ position: relative;
             display: flex;
             flex-direction: column-reverse;
             text-align: center;
-            transform: rotate(25deg);
+            transform: rotate(0);
             color: var(--color-white);
             h2{
                 font-size: 55px;
@@ -460,8 +460,9 @@ position: relative;
     border-radius: 25px;
     transform: rotate(15deg);
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 20%;
+    transform: translateY(-20%);
+    left: 20%;
     display: none;
     transition: all 0.5s ease-in-out;
     & > img{
@@ -475,44 +476,332 @@ position: relative;
 
 .about-card{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%;
+    transform: translateY(-30%);
     left: 50px;
     max-width: 543px;
     background: transparent;
     display: none; /* Скрываем все текстовые блоки по умолчанию */
-    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
 
 .about-card.active {
     display: block;
     opacity: 1;
+    transition: all 0.5s ease;
 }
 
 .about-img.first {
     display: block;
     transform: translateX(0) rotate(0); /* Стиль для первого изображения */
     z-index: 3; /* Приоритет отображения */
+    transition: all  0.5s ease-in-out;
 }
 
 .about-img.second {
     display: block;
-    transform: translateX(-10%) rotate(10deg); /* Стиль для второго изображения */
+    transform: translateX(25px) rotate(15deg); /* Стиль для второго изображения */
     z-index: 2;
+    transition: all 0.5s ease-in-out;
 }
 
 .about-img.third {
     display: block;
-    transform: translateX(-20%) rotate(20deg); /* Стиль для третьего изображения */
+    transform: translateX(65px) rotate(25deg); /* Стиль для третьего изображения */
     z-index: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 .about-img-active{
     display: block;
 }
 
+.review{
+    width: 100%;
+    padding-top: 76px;
+    padding-bottom: 76px;
+    background: rgba(235, 243, 245, 1);
+    box-shadow: 0px 37px 60px 0px rgba(0, 0, 0, 0.02);    
+    &-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-title{
+        font-family: 'Eraser';
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 58.5px;
+        letter-spacing: -0.01em;
+        text-align: center;
+    }
+    &-subtitle{
+        max-width: 563px;
+        font-family: 'Uefa';
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 23.17px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        transition: all .3s ease;
+    }
+    &-cards{
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        align-items: center;
+    }
+    &-card{
+        width: 582px;
+        margin-left: 23px;
+        margin-right: 23px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: all .5s ease;
+        // opacity: 0;
+        &-text{
+            padding: 44px 44px 44px 49px;
+            background: var(--color-yelow);
+            font-family: 'Uefa';
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 34.2px;
+            text-align: left;
+        }
+        &-footer{
+            background: var(--color-green);
+            display: flex;
+            padding: 51px 26px;   
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-user{
+            display: flex;
+
+            &-foto{
+                width: 70px;
+                height: 70px;
+                border: 2px solid rgba(255, 255, 255, 1);
+                & > img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-name{
+                color: var(--color-white);
+                display: flex;
+                flex-direction: column;
+                padding-left: 12px;
+                justify-content: space-between;
+                &> p{
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 22.4px;
+                    letter-spacing: 0.03em;
+                    text-align: left;
+                    margin-bottom: 0;
+                    &> span {
+                        font-family: 'Eraser';
+                        font-size: 20px;
+                        font-weight: 500;
+                        line-height: 32px;
+                        letter-spacing: -0.01em;
+                        text-align: left;
+                        
+                    }
+                }
+            }
+        }
+        &-decor{
+            width: 70px;
+            height: 55px;
+            display: flex;
+            justify-content: space-between;
+            &-left{
+                width: 30px;
+                height: 100%;
+                background: var(--color-white);
+                position: relative;
+                &::before{
+                    content: '';
+                    height: 50%;
+                    width: 100%;
+                    border-bottom: 32px solid var(--color-green);
+                    border-left: 30px solid transparent;
+                    position: absolute;
+                    bottom: -1px;
+                    right: -1px;
+                    
+                }
+            }
+        }
+    }
+    &-btn{
+        height: 369px;
+        font-size: 30px;
+        color: var(--color-green);
+        transition: all .3s ease;
+        padding-left: 5px;
+        padding-right: 5px;
+        &:hover{
+            transform: scale(1.03);
+        }
+    }
+    &-modal{
+        margin-top: 36px;
+    }
+}
+.reviews{
+    width: 100%;
+    padding-top: 76px;
+    padding-bottom: 76px;
+    &-container{
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        h4{
+            font-family: 'Uefa';
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 23.17px;
+            letter-spacing: 0.1em;
+            text-align: center;
+        }
+        h5{
+           font-family: 'Eraser';
+            font-size: 45px;
+            font-weight: 500;
+            line-height: 58.5px;
+            letter-spacing: -0.01em;
+            text-align: center;
+        }
+    }
+}
+
+.trainer{
+    display: flex;
+    align-items: center;
+    padding-top: 76px;
+    padding-bottom: 76px;
+    &-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 36px;
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 76px;
+        &-card{
+            margin-top: 36px;
+            margin-bottom: 36px;
+            width: 100%;
+            height: 430px;
+            background-color: var(--color-green);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            &-img{
+                width: 233px;
+                height: 336px;
+                border: 10px solid var(--color-white);
+                border-radius: 25px;
+                box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.17);
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+                & > .logotype{
+                    width: 150px;
+                    height: 150px;
+                    position: absolute;
+                    bottom: -50px;
+                    right: -75px;
+                    filter: contrast(150%);
+                }
+            }
+            &-text{
+                width: 50%;
+                display: flex;
+                height: 100%;
+                // justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+                flex-direction: column;
+                text-align: center;
+                color: var(--color-white);
+                 & > h5{
+                    font-family:  'Eraser';
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 28.8px;
+                    text-align: center;
+                    margin-bottom: 23px;
+                    
+                }
+                & > .ball{
+                    width: 100px;
+                    height: 100px;
+                    margin-bottom: 36px;
+                    margin-top: 36px;
+                }
+                & > h6{
+                    font-family: 'Uefa';
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 23.17px;
+                    letter-spacing: 0.1em;
+                    text-align: center;
+                    color: var(--color-yelow);
+                    padding-bottom: 36px;
+                }
+                & > p{
+                    font-family: 'Uefa';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 28.8px;
+                    text-align: center;
+                    
+                }
+            }
+        }
+    }
+}
+
+.custom-btn{
+    position: relative;
+    margin-top: 58px;
+    font-family: 'Uefa';
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 17.5px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    width: 50%;
+    text-transform: uppercase;
+    padding: 18px 43px 19px 43px;
+    border: 2px solid var(--color-green);
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
 .item-animation-objects{
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all .5s ease;
+}
+
+.item-animation-objects-express{
     opacity: 0;
     transform: translateX(-20px);
     transition: all .5s ease;
@@ -656,6 +945,24 @@ position: relative;
                     }
                 }
             }
+        }
+    }
+    .review{
+        &-cards{
+            flex-direction: column;
+        }
+        &-card{
+            width: 340px;
+            margin-left: 0;
+            margin-right: 0;
+            &-footer{
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+        &-btn{
+            height: 40px;
+            width: 100%;
         }
     }
 

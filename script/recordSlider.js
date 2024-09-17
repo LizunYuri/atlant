@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     const updateSlides = () => {
-        // Обновляем изображения
+        // Обновляем изобр
         images.forEach((img, index) => {
             img.classList.remove('first', 'second', 'third');
             img.style.display = 'none';
@@ -29,17 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Показать только текст, который соответствует изображению с классом 'first'
         const currentImageDataAttr = images[currentIndex].querySelector('img').getAttribute('src').match(/\d/)[0]; 
         texts.forEach(text => {
+            
             if (text.getAttribute('data-img') === currentImageDataAttr) {
+                setTimeout(() => {
                 text.classList.add('active');
                 text.style.display = 'block';
+            }, 500)
             }
         });
     };
 
-    // Инициализация слайдов при загрузке
+
     updateSlides();
 
-    // Кнопка "следующий слайд"
     document.querySelector('.next-slide').addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % images.length;
         updateSlides();

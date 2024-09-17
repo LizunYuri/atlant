@@ -4,6 +4,8 @@ const cycleObjectsTitle = document.querySelectorAll('.cycle-objects-title')
 const cycleObjectsImg = document.querySelectorAll('.cycle-objects-img')
 const backgroundSlides = document.querySelectorAll('.first-screen-slide')
 const itemAnimation = document.querySelectorAll('.item-animation-objects')
+const itemAnimationExpress = document.querySelectorAll('.item-animation-objects-express')
+const elementReverse = document.querySelectorAll('.trainer-content-card')
 
 const cycleEffectCard = (content, timing, effect, delay, percent) => {
     content.forEach((e, index) => {
@@ -55,6 +57,17 @@ const slideShowBackground = () =>{
 }
 
 
+const reverseBlock =() => {
+    
+
+    elementReverse.forEach((e, index) => {
+        if ((index + 1) % 2 === 0) {
+            e.style.flexDirection = 'row-reverse';
+        }
+    }) 
+}
+
+
 const handleScrollEffect = () => {
     cycleEffectCard(
         cycleObjectsCard,
@@ -69,7 +82,14 @@ const handleScrollEffect = () => {
             'fade-element',
             300,
             0.1
-            );
+        );
+        cycleEffectCard(
+            itemAnimationExpress,
+            400,
+            'fade-element',
+            200,
+            0.1
+        );
 
     cycleEffectFade(
         cycleObjectsSubtitle,
@@ -89,10 +109,17 @@ const handleScrollEffect = () => {
         'fade-element',
         0.2
     )
+    cycleEffectFade(
+        cycleObjectsImg,
+        700,
+        'fade-element',
+        0.2
+    )
 }
 
 window.addEventListener('DOMContentLoaded', () => {
     handleScrollEffect();
-    slideShowBackground()
+    slideShowBackground();
+    reverseBlock ();
     window.addEventListener('scroll', handleScrollEffect);
 });

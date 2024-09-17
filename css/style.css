@@ -240,9 +240,9 @@ main {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   text-align: center;
-  -webkit-transform: rotate(25deg);
-      -ms-transform: rotate(25deg);
-          transform: rotate(25deg);
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
   color: var(--color-white);
 }
 .first-screen-right-title h2 {
@@ -564,8 +564,11 @@ main {
       -ms-transform: rotate(15deg);
           transform: rotate(15deg);
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 20%;
+  -webkit-transform: translateY(-20%);
+      -ms-transform: translateY(-20%);
+          transform: translateY(-20%);
+  left: 20%;
   display: none;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -582,21 +585,24 @@ main {
 
 .about-card {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: 30%;
+  -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+          transform: translateY(-30%);
   left: 50px;
   max-width: 543px;
   background: transparent;
   display: none; /* Скрываем все текстовые блоки по умолчанию */
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .about-card.active {
   display: block;
   opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .about-img.first {
@@ -605,29 +611,401 @@ main {
       -ms-transform: translateX(0) rotate(0);
           transform: translateX(0) rotate(0); /* Стиль для первого изображения */
   z-index: 3; /* Приоритет отображения */
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .about-img.second {
   display: block;
-  -webkit-transform: translateX(-10%) rotate(10deg);
-      -ms-transform: translateX(-10%) rotate(10deg);
-          transform: translateX(-10%) rotate(10deg); /* Стиль для второго изображения */
+  -webkit-transform: translateX(25px) rotate(15deg);
+      -ms-transform: translateX(25px) rotate(15deg);
+          transform: translateX(25px) rotate(15deg); /* Стиль для второго изображения */
   z-index: 2;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .about-img.third {
   display: block;
-  -webkit-transform: translateX(-20%) rotate(20deg);
-      -ms-transform: translateX(-20%) rotate(20deg);
-          transform: translateX(-20%) rotate(20deg); /* Стиль для третьего изображения */
+  -webkit-transform: translateX(65px) rotate(25deg);
+      -ms-transform: translateX(65px) rotate(25deg);
+          transform: translateX(65px) rotate(25deg); /* Стиль для третьего изображения */
   z-index: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .about-img-active {
   display: block;
 }
 
+.review {
+  width: 100%;
+  padding-top: 76px;
+  padding-bottom: 76px;
+  background: rgb(235, 243, 245);
+  -webkit-box-shadow: 0px 37px 60px 0px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 37px 60px 0px rgba(0, 0, 0, 0.02);
+}
+.review-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.review-title {
+  font-family: "Eraser";
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 58.5px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+.review-subtitle {
+  max-width: 563px;
+  font-family: "Uefa";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23.17px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.review-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.review-card {
+  width: 582px;
+  margin-left: 23px;
+  margin-right: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.review-card-text {
+  padding: 44px 44px 44px 49px;
+  background: var(--color-yelow);
+  font-family: "Uefa";
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 34.2px;
+  text-align: left;
+}
+.review-card-footer {
+  background: var(--color-green);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 51px 26px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.review-card-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.review-card-user-foto {
+  width: 70px;
+  height: 70px;
+  border: 2px solid rgb(255, 255, 255);
+}
+.review-card-user-foto > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.review-card-user-name {
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.review-card-user-name > p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  margin-bottom: 0;
+}
+.review-card-user-name > p > span {
+  font-family: "Eraser";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+.review-card-decor {
+  width: 70px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.review-card-decor-left {
+  width: 30px;
+  height: 100%;
+  background: var(--color-white);
+  position: relative;
+}
+.review-card-decor-left::before {
+  content: "";
+  height: 50%;
+  width: 100%;
+  border-bottom: 32px solid var(--color-green);
+  border-left: 30px solid transparent;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+}
+.review-btn {
+  height: 369px;
+  font-size: 30px;
+  color: var(--color-green);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.review-btn:hover {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.review-modal {
+  margin-top: 36px;
+}
+
+.reviews {
+  width: 100%;
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.reviews-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews-container h4 {
+  font-family: "Uefa";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23.17px;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.reviews-container h5 {
+  font-family: "Eraser";
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 58.5px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.trainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.trainer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 36px;
+}
+.trainer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 76px;
+}
+.trainer-content-card {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  width: 100%;
+  height: 430px;
+  background-color: var(--color-green);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.trainer-content-card-img {
+  width: 233px;
+  height: 336px;
+  border: 10px solid var(--color-white);
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.17);
+          box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.17);
+  position: relative;
+}
+.trainer-content-card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.trainer-content-card-img > .logotype {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: -50px;
+  right: -75px;
+  -webkit-filter: contrast(150%);
+          filter: contrast(150%);
+}
+.trainer-content-card-text {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: var(--color-white);
+}
+.trainer-content-card-text > h5 {
+  font-family: "Eraser";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  text-align: center;
+  margin-bottom: 23px;
+}
+.trainer-content-card-text > .ball {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 36px;
+  margin-top: 36px;
+}
+.trainer-content-card-text > h6 {
+  font-family: "Uefa";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23.17px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: var(--color-yelow);
+  padding-bottom: 36px;
+}
+.trainer-content-card-text > p {
+  font-family: "Uefa";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28.8px;
+  text-align: center;
+}
+
+.custom-btn {
+  position: relative;
+  margin-top: 58px;
+  font-family: "Uefa";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 17.5px;
+  letter-spacing: 0.12em;
+  text-align: center;
+  width: 50%;
+  text-transform: uppercase;
+  padding: 18px 43px 19px 43px;
+  border: 2px solid var(--color-green);
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 .item-animation-objects {
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.item-animation-objects-express {
   opacity: 0;
   -webkit-transform: translateX(-20px);
       -ms-transform: translateX(-20px);
@@ -807,5 +1185,29 @@ main {
     -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
             transform: rotate(0);
+  }
+  .review-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .review-card {
+    width: 340px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .review-card-footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .review-btn {
+    height: 40px;
+    width: 100%;
   }
 }
