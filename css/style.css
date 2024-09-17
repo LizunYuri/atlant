@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Eraser;
   src: url("../font/Eraser.eot");
@@ -501,16 +502,6 @@ main {
   min-height: 748px;
   height: 100%;
 }
-.about-content-text > .about-card {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 50px;
-  max-width: 543px;
-  background: transparent;
-}
 .about-content-text > .about-btn {
   margin-bottom: 36px;
   margin-left: 36px;
@@ -563,7 +554,8 @@ main {
   display: -ms-flexbox;
   display: flex;
 }
-.about-content-content > .about-img {
+
+.about-img {
   width: 262px;
   height: 371px;
   border: 10px solid var(--color-white);
@@ -574,8 +566,11 @@ main {
   position: absolute;
   top: 40%;
   left: 40%;
+  display: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.about-content-content > .about-img > img {
+.about-img > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -584,19 +579,52 @@ main {
   -webkit-box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.17);
           box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.17);
 }
-.about-content-content > .about-img:nth-child(2) {
-  top: 30%;
-  left: 30%;
-  -webkit-transform: rotate(5deg);
-      -ms-transform: rotate(5deg);
-          transform: rotate(5deg);
+
+.about-card {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50px;
+  max-width: 543px;
+  background: transparent;
+  display: none; /* Скрываем все текстовые блоки по умолчанию */
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
-.about-content-content > .about-img:last-child {
-  top: 15%;
-  left: 15%;
-  -webkit-transform: rotate(0);
-      -ms-transform: rotate(0);
-          transform: rotate(0);
+
+.about-card.active {
+  display: block;
+  opacity: 1;
+}
+
+.about-img.first {
+  display: block;
+  -webkit-transform: translateX(0) rotate(0);
+      -ms-transform: translateX(0) rotate(0);
+          transform: translateX(0) rotate(0); /* Стиль для первого изображения */
+  z-index: 3; /* Приоритет отображения */
+}
+
+.about-img.second {
+  display: block;
+  -webkit-transform: translateX(-10%) rotate(10deg);
+      -ms-transform: translateX(-10%) rotate(10deg);
+          transform: translateX(-10%) rotate(10deg); /* Стиль для второго изображения */
+  z-index: 2;
+}
+
+.about-img.third {
+  display: block;
+  -webkit-transform: translateX(-20%) rotate(20deg);
+      -ms-transform: translateX(-20%) rotate(20deg);
+          transform: translateX(-20%) rotate(20deg); /* Стиль для третьего изображения */
+  z-index: 1;
+}
+
+.about-img-active {
+  display: block;
 }
 
 .item-animation-objects {
