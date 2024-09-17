@@ -778,6 +778,342 @@ position: relative;
     }
 }
 
+.schedule{
+    width: 100%;
+    padding-top: 76px;
+    padding-bottom: 76px;
+    &-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &-content{
+        margin-top: 36px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-card{
+            display: flex;
+            margin-bottom: 36px;
+            & > .left{
+                width: 100px;
+                height: auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            & > .right{
+                width: 250px;
+                min-height: 150px;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--color-yelow);
+                & > h6{
+                    padding-top: 23px;
+                    color: var(--color-green);
+                    font-family: 'Eraser';
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 26.4px;
+                    text-align: center;
+                    
+                }
+                & > .time{
+                    display: flex;
+                    padding-left: 12px;
+                    border-bottom: 2px solid var(--color-green);
+                    p{ 
+                        padding-right: 12px;
+                        font-family: 'Uefa';
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 22.4px;
+                            letter-spacing: 0.03em;
+                            text-align: left;
+                        & > span{
+                            font-family: 'Uefa';
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 22.4px;
+                            letter-spacing: 0.03em;
+                            text-align: left;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+.blog{
+    width: 100%;
+    padding-top: 76px;
+    padding-bottom: 76px;
+    background: rgba(235, 243, 245, 1);
+    box-shadow: 0px 37px 60px 0px rgba(0, 0, 0, 0.02); 
+    &-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 76px;
+        padding-bottom: 76px;
+        &-card{
+            cursor: pointer;
+            width: 370px;
+            display: flex;
+            flex-direction: column;
+            transition: all .5s ease;
+            transform: translateY(-30px);
+            transform: translateX(-40px);
+            // opacity: 0;
+            &-img{
+                width: 100%;
+                height: 325px;
+                &> img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-text{
+                display: flex;
+                flex-direction: column;
+                padding: 30px 27px 30px 26px;
+                background: rgba(237, 245, 247, 1);
+                & > .date{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    & > .line{
+                        width: 20px;
+                        height: 2px;
+                        background: rgba(39, 45, 50, 1)
+                    }
+                    & > p{
+                        margin: 0;
+                        font-size: 13px;
+                        font-weight: 700;
+                        line-height: 16.25px;
+                        letter-spacing: 0.06em;
+                        text-align: left;
+                        color: var(--color-black);
+                        font-family: 'Uefa';
+                        &:last-child{
+                            text-align: right;
+                        }
+                    }
+                }
+                & > h6{
+                    padding-bottom: 22px;
+                    padding-top: 22px;
+                    color: var(--color-black);
+                    font-family: 'Eraser';
+                }
+                & > p{
+                    font-family: 'Uefa';
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 27.9px;
+                    letter-spacing: 0.02em;
+                    text-align: left;
+                    color: var(--color-black);
+                }
+            }
+        }
+    }
+    
+}
+
+.footer{
+    padding-top: 76px;
+    background: var(--color-green);
+    &-logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 76px;
+        border-bottom: 1px solid var(--color-yelow);
+        &-link{
+            display: flex;
+            align-items: center;
+             img{
+                width: 40px;
+                height: 40px;
+                filter: contrast(150%);
+            }
+            h6{
+                margin: 0;
+                padding-left: 23px;
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 50px;
+                letter-spacing: 0.02em;
+                text-align: left;
+                color: var(--color-yelow);
+                font-family: 'Eraser';
+            }
+        }
+    }
+    &-icons{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+       &> a{
+            width: 55px;
+            height: 55px;
+            border: 2px solid var(--color-yelow);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-yelow);
+            font-size: 22px;
+            font-family: 'Uefa';
+        }
+    }
+    &-body{
+        display: flex;
+        padding-top: 76px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        &-explorer{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            ul{
+                padding-left: 0;
+            }
+            p{
+                font-family: 'Eraser';
+                
+                color: var(--color-yelow);
+            }
+            a{
+                color: var(--color-yelow);
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 34px;
+                letter-spacing: -0.01em;
+                text-align: left;
+                font-family: 'Uefa';
+            }
+        }
+    }
+    &-address{
+        width: 325px;
+        
+        h6, p, span, a{
+            color: var(--color-yelow);
+            padding-bottom: 22px;
+        }
+        h6{
+            
+            margin: 0;
+                font-weight: 500;
+                line-height: 50px;
+                letter-spacing: 0.02em;
+                text-align: left;
+                color: var(--color-yelow);
+                font-family: 'Eraser';
+           
+        }
+        p, a{
+            display: flex;
+            align-items: flex-start;
+            margin: 0;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 25.5px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            padding-bottom: 22px;
+            font-family: 'Uefa';
+            & > span{
+                font-weight: 700;
+                padding-bottom: 22px;
+                padding-right: 22px;
+            }
+            
+        }
+    }
+    &-working{
+        width: 176px;
+        h6, p, span, a{
+            color: var(--color-yelow);
+            padding-bottom: 22px;
+        }
+        h6{
+            
+            font-weight: 400;
+           
+        }
+        p, a{
+            display: flex;
+            align-items: flex-start;
+            margin: 0;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 25.5px;
+            letter-spacing: -0.01em;
+            text-align: left;
+            padding-bottom: 22px;
+            font-family: 'Uefa';
+            & > span{
+                font-weight: 700;
+                padding-bottom: 22px;
+                padding-right: 22px;
+            }
+            
+        }
+    }
+}
+.copyright{
+    background: var(--color-green);
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Eraser';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--color-yelow);
+}
+
+.scroll-to-top{
+    width: 55px;
+    height: 55px;
+    border: 2px solid var(--color-yelow);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-yelow);
+    font-size: 23px;
+}
+
 .custom-btn{
     position: relative;
     margin-top: 58px;

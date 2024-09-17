@@ -270,14 +270,174 @@
             </div>
         </section>
         <section class="schedule" id="schedule">
-            
+            <div class="container schedule-container">
+                <h2 class="review-subtitle cycle-objects-title">Расписание</h2>
+                <h3 class="review-title cycle-objects-title">Встретимся на поле</h3>
+                <div class="schedule-content">
+                    <div class="schedule-content-card item-animation-objects-express">
+                        <div class="left">
+                            <img src="./img/AlbedoBase_XL_logo_of_a_childrens_football_club_colors_yellow_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <h6>Понедельник</h6>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                    <div class="schedule-content-card item-animation-objects-express">
+                        <div class="left">
+                            <img src="./img/AlbedoBase_XL_logo_of_a_childrens_football_club_colors_yellow_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <h6>Вторник</h6>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                    <div class="schedule-content-card item-animation-objects-express">
+                        <div class="left">
+                            <img src="./img/AlbedoBase_XL_logo_of_a_childrens_football_club_colors_yellow_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <h6>Среда</h6>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                    <div class="schedule-content-card  item-animation-objects-express">
+                        <div class="left">
+                            <img src="./img/AlbedoBase_XL_logo_of_a_childrens_football_club_colors_yellow_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <h6>Четверг</h6>
+                            <div class="time">
+                                <p><span>9:00</span>-<span>10:00</span></p>
+                                <p>Lorem, ipsum. Lorem, ipsum.</p>
+                            </div>
+                            <div class="time">
+                                <p><span>9:00</span>-<span>10:00</span></p>
+                                <p>Lorem, ipsum. Lorem, ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-content-card item-animation-objects-express">
+                        <div class="left">
+                            <img src="./img/AlbedoBase_XL_logo_of_a_childrens_football_club_colors_yellow_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <h6>Пятница</h6>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                    <div class="schedule-content-card item-animation-objects-express">
+                        <div class="left">
+                            <img src="./img/AlbedoBase_XL_logo_of_a_childrens_football_club_colors_yellow_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <h6>Суббота</h6>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                    <div class="schedule-content-card item-animation-objects-express">
+                        <div class="left">
+                            <img src="./img/AlbedoBase_XL_logo_of_a_childrens_football_club_colors_yellow_1.jpg" alt="">
+                        </div>
+                        <div class="right">
+                            <h6>Воскресенье</h6>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        <section class="blog" id="blog">
+            <div class="container blog-container">
+             <h2 class="review-subtitle cycle-objects-title">Блог</h2>
+             <h3 class="review-title cycle-objects-title">Новости с поля</h3>
+             <div class="blog-content">
+                 
+                     <a href="№">
+                         <div class="blog-content-card">
+                             <div class="blog-content-card-img">
+                                 <img src="./img/004.png" alt="{{ blog.title }}">
+                             </div>
+                             <div class="blog-content-card-text">
+                                 <div class="date">
+                                     <p>Lorem, ipsum.</p>
+                                     <div class="line"></div>
+                                     <p>Lorem.</p>
+                                 </div>
+                                 <h6>Lorem ipsum dolor sit amet.</h6>
+                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non sit vel voluptatibus ratione esse rem accusamus laboriosam, sunt est architecto aperiam velit. Debitis officia cumque culpa veritatis fugiat asperiores nulla.</p>
+                             </div>
+                         </div>
+                     </a>
+                 
+             </div>
+             <a class="custom-btn" href="{% url 'blogs' %}">показать еще</a>    
+            </div> 
+         </section>
 
 
         
     </main>
 
-
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <a class="footer-logo-link" href="https://poolkuban.ru">
+                    <img src="./img/logotype2.png" alt="">
+                    <h6>Атлант</h6>
+                </a>
+                <div class="footer-icons">
+                    <a href="#">
+                        <i class="fa-brands fa-vk"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-at"></i>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="footer-body">
+                <div class="footer-body-explorer">
+                    <p>Навигация:</p>
+                    <nav>
+                        <ul>
+                            <li class="header-effect block"><a href="{% url 'about' %}">О нас</a></li>
+                            <li class="header-effect block"><a href="{% url 'blogs' %}">Истории</a></li>
+                            <li class="header-effect block"><a href="#">shop</a></li>
+                            <li class="header-effect block"><a href="#">services</a></li>
+                            <li class="header-effect block"><a href="#">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer-body-explorer">
+                    <p>Информация:</p>
+                        <ul>
+                            <li class="header-effect block"><a href="#">home</a></li>
+                            <li class="header-effect block"><a href="#">blog</a></li>
+                            <li class="header-effect block"><a href="#">shop</a></li>
+                            <li class="header-effect block"><a href="#">services</a></li>
+                            <li class="header-effect block"><a href="#">contact</a></li>
+                        </ul>
+                </div>
+                <div class="footer-address">
+                   <h6>Контакты:</h6>
+                        <p class="header-list-item">г. Воронеж, ул.Лизюкова, 18</p>
+                        <a class="header-list-item" href="tel:890000000000">8(000)000-00-00</a>
+                    <div class="footer-working">
+    
+                    <button class="scroll-to-top" id="scrollToTopBtn" onclick="scrollToTop()">
+                        <i class="fas fa-chevron-up"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+           &copy; &nbsp;&nbsp;2024 &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; 
+        </div>
+    </footer>
     <script src="./script/script.js"></script>
     <script src="./script/recordSlider.js"></script>
     <script src="./script/reviewSlider.js"></script>

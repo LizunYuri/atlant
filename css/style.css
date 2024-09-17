@@ -978,6 +978,449 @@ main {
   text-align: center;
 }
 
+.schedule {
+  width: 100%;
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.schedule-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.schedule-content {
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.schedule-content-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 36px;
+}
+.schedule-content-card > .left {
+  width: 100px;
+  height: auto;
+}
+.schedule-content-card > .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.schedule-content-card > .right {
+  width: 250px;
+  min-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--color-yelow);
+}
+.schedule-content-card > .right > h6 {
+  padding-top: 23px;
+  color: var(--color-green);
+  font-family: "Eraser";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26.4px;
+  text-align: center;
+}
+.schedule-content-card > .right > .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 12px;
+  border-bottom: 2px solid var(--color-green);
+}
+.schedule-content-card > .right > .time p {
+  padding-right: 12px;
+  font-family: "Uefa";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22.4px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+.schedule-content-card > .right > .time p > span {
+  font-family: "Uefa";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22.4px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.blog {
+  width: 100%;
+  padding-top: 76px;
+  padding-bottom: 76px;
+  background: rgb(235, 243, 245);
+  -webkit-box-shadow: 0px 37px 60px 0px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 37px 60px 0px rgba(0, 0, 0, 0.02);
+}
+.blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blog-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+.blog-content-card {
+  cursor: pointer;
+  width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-transform: translateX(-40px);
+      -ms-transform: translateX(-40px);
+          transform: translateX(-40px);
+}
+.blog-content-card-img {
+  width: 100%;
+  height: 325px;
+}
+.blog-content-card-img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.blog-content-card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 27px 30px 26px;
+  background: rgb(237, 245, 247);
+}
+.blog-content-card-text > .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+.blog-content-card-text > .date > .line {
+  width: 20px;
+  height: 2px;
+  background: rgb(39, 45, 50);
+}
+.blog-content-card-text > .date > p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16.25px;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: var(--color-black);
+  font-family: "Uefa";
+}
+.blog-content-card-text > .date > p:last-child {
+  text-align: right;
+}
+.blog-content-card-text > h6 {
+  padding-bottom: 22px;
+  padding-top: 22px;
+  color: var(--color-black);
+  font-family: "Eraser";
+}
+.blog-content-card-text > p {
+  font-family: "Uefa";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--color-black);
+}
+
+.footer {
+  padding-top: 76px;
+  background: var(--color-green);
+}
+.footer-logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 76px;
+  border-bottom: 1px solid var(--color-yelow);
+}
+.footer-logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-logo-link img {
+  width: 40px;
+  height: 40px;
+  -webkit-filter: contrast(150%);
+          filter: contrast(150%);
+}
+.footer-logo-link h6 {
+  margin: 0;
+  padding-left: 23px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--color-yelow);
+  font-family: "Eraser";
+}
+.footer-icons {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer-icons > a {
+  width: 55px;
+  height: 55px;
+  border: 2px solid var(--color-yelow);
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color-yelow);
+  font-size: 22px;
+  font-family: "Uefa";
+}
+.footer-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 76px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.footer-body-explorer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.footer-body-explorer ul {
+  padding-left: 0;
+}
+.footer-body-explorer p {
+  font-family: "Eraser";
+  color: var(--color-yelow);
+}
+.footer-body-explorer a {
+  color: var(--color-yelow);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  font-family: "Uefa";
+}
+.footer-address {
+  width: 325px;
+}
+.footer-address h6, .footer-address p, .footer-address span, .footer-address a {
+  color: var(--color-yelow);
+  padding-bottom: 22px;
+}
+.footer-address h6 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--color-yelow);
+  font-family: "Eraser";
+}
+.footer-address p, .footer-address a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25.5px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  padding-bottom: 22px;
+  font-family: "Uefa";
+}
+.footer-address p > span, .footer-address a > span {
+  font-weight: 700;
+  padding-bottom: 22px;
+  padding-right: 22px;
+}
+.footer-working {
+  width: 176px;
+}
+.footer-working h6, .footer-working p, .footer-working span, .footer-working a {
+  color: var(--color-yelow);
+  padding-bottom: 22px;
+}
+.footer-working h6 {
+  font-weight: 400;
+}
+.footer-working p, .footer-working a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25.5px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  padding-bottom: 22px;
+  font-family: "Uefa";
+}
+.footer-working p > span, .footer-working a > span {
+  font-weight: 700;
+  padding-bottom: 22px;
+  padding-right: 22px;
+}
+
+.copyright {
+  background: var(--color-green);
+  height: 75px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Eraser";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-yelow);
+}
+
+.scroll-to-top {
+  width: 55px;
+  height: 55px;
+  border: 2px solid var(--color-yelow);
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--color-yelow);
+  font-size: 23px;
+}
+
 .custom-btn {
   position: relative;
   margin-top: 58px;
