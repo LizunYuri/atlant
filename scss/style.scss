@@ -291,7 +291,7 @@ position: relative;
 .body-nav{
     width: 0;
     z-index: 98;
-    position: relative;
+    position: absolute;
     display: flex;
     height: 100vh;
     background: var(--color-yelow);
@@ -304,6 +304,7 @@ position: relative;
     padding-top: 120px;
     padding-right: 40px;
     &-menu{
+        
         display: flex;
        flex-direction: column;
        align-items: flex-end;
@@ -954,8 +955,8 @@ position: relative;
             display: flex;
             align-items: center;
              img{
-                width: 40px;
-                height: 40px;
+                width: 80px;
+                height: 80px;
                 filter: contrast(150%);
             }
             h6{
@@ -1131,6 +1132,241 @@ position: relative;
     transition: all 1s ease;
 }
 
+.custom-modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 62, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: all .5s ease;
+    & > .body{
+        width: 320px;
+        height: 480px;
+        background: var(--color-yelow);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > .closed{
+            font-weight: 500;
+            font-size: 60px;
+            position: absolute;
+            top: -60px;
+            right: -25px;
+            transform: rotate(45deg);
+            color: rgba(255, 255, 255, 1);
+            transition: all .3s ease;
+            cursor: pointer;
+            &:hover{
+                color: red;
+                font-weight: 500;
+                transform: scale(1.05) rotate(135deg);
+            }
+        }
+
+    }
+}
+
+.modal-title{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px; 
+    color: var(--color-black);
+}
+.modal-subtitle{
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: var(--color-black);
+    text-transform: uppercase;
+    padding-bottom: 46px;
+}
+
+.modal-form{
+    display: flex;align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 23px;
+    & > .title{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 26px;
+        h5{
+            font-family: 'Eraser';
+        }
+    }
+}
+
+.modal-form-input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 23px;
+    label{
+        font-family: 'Uefa';
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 20px;
+        color: var(--color-black);
+        text-transform: uppercase;
+        filter: contrast(200%);
+    }
+    input[type='text']{
+        border: 1px solid var(--color-green);
+        font-size: 18px;
+        padding: 8px 13px;
+        &::placeholder{
+            font-size: 11px;
+            font-style: italic;
+        }
+    }
+    input[type='submit']{
+        height: 46px;
+        width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.40px;
+        text-align: center;
+        color: var(--color-yelow);
+        background: var(--color-green);
+        transition: all .5s ease;
+        &:hover{
+            filter: blur(1px) saturate(30%);
+            transform: scale(1.01);
+        }
+    }
+}
+
+.modal-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.modal-none{
+    display: none;
+}
+
+.success-message{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &>.title{
+        margin-bottom: 23px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 16px; 
+    }
+    &>.subtitle{
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 20px;
+        color: rgba(100, 92, 85, 1);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+    &>.contact{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 23px;
+    }
+}
+
+.custom-modal-btn{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    width: 150px;
+    height: 80px;
+    background: var(--color-green);
+    border: 10px solid var(--color-green);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--color-white);
+    border: 5px solid var(--color-white);
+    box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.6);
+    transition: all 1s ease;
+    // 
+    img{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        right: -50px;
+        transition: all 1s ease;
+        z-index: 99;
+        animation: rotate 3s linear infinite;
+    }
+    &:hover{
+        width: 155px;
+        height: 85px;
+        img{
+            width: 90px;
+            height: 90px;
+            right: 80px;
+            
+            animation: none;
+        }
+    }
+    p{
+        padding-left: 12px;
+        padding-right: 12px;
+        font-family: serif;
+        font-family: 'Uefa';
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 20px;
+        color: var(--color-black);
+        text-transform: uppercase;
+        filter: contrast(200%);
+        color: var(--color-white);
+        margin-bottom: 0;
+        & > span{
+            font-family: 'Eraser';
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    0%{
+        transform: scale(1);
+    }
+    
+}
+
 .item-animation-objects{
     opacity: 0;
     transform: translateX(-20px);
@@ -1167,7 +1403,6 @@ position: relative;
     transition: all .5s ease;
 }
 
-
 .fade-element{
     opacity: 1;
     transform: translateX(0);
@@ -1197,6 +1432,12 @@ position: relative;
         .first-screen-container > .row{
         flex-direction: column-reverse;
         align-items: center;
+    }
+    .custom-modal{
+        align-items: flex-start;
+        & > .body{
+            margin-top: 100px;
+        }
     }
 
 }
@@ -1237,7 +1478,15 @@ position: relative;
             }
         }
     }
-    
+    .modal-title{
+        font-size: 14px;
+    }
+    .modal-subtitle{
+        font-size: 10px;
+    }
+    .modal-form{
+        margin-top: 0;
+    }
 
 }
 @media (max-width:460px) {
@@ -1257,7 +1506,7 @@ position: relative;
     }
     .about{
         &-content{
-            min-height: 1500px;
+            min-height: 1200px;
             flex-direction: column;
             align-items: center;
             &-text{
@@ -1266,22 +1515,15 @@ position: relative;
             &-content{
                 width: 90%;
                 & > .about-img{
-                    width: 210px;
-                    height: 297px;
+                    width: 187px;
+                    height: 277px;
                     left: 10%;
-                    &:nth-child(2){
-                        top: 12%;
-                        left: 25%;
-                        transform: rotate(5deg);
-                    }
-                    &:last-child{
-                        top: 8%;
-                        left: 15%;
-                        transform: rotate(0);
-                    }
                 }
             }
         }
+    }
+    .about-img.third {
+        transform: translateX(15px);
     }
     .review{
         &-cards{
@@ -1301,5 +1543,77 @@ position: relative;
             width: 100%;
         }
     }
+    .trainer{
+        &-content{
+            &-card{
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                &-img{
+                    margin-top: 26px;
+                }
+            }
+        }
+    }
+    .schedule{
+        &-content{
+            margin-top: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
 
+    .blog-content{
+        justify-content: flex-end;
+    }
+
+
+    .footer{
+        &-logo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-bottom: 76px;
+            border-bottom: 1px solid var(--color-yelow);
+            &-link{
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        &-icons{
+            margin-top: 36px;
+        }
+        &-working{
+            width: 176px;
+            h6, p, span, a{
+                color: var(--color-yelow);
+                padding-bottom: 22px;
+            }
+            h6{
+                
+                font-weight: 400;
+               
+            }
+            p, a{
+                display: flex;
+                align-items: flex-start;
+                margin: 0;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 25.5px;
+                letter-spacing: -0.01em;
+                text-align: left;
+                padding-bottom: 22px;
+                font-family: 'Uefa';
+                & > span{
+                    font-weight: 700;
+                    padding-bottom: 22px;
+                    padding-right: 22px;
+                }
+                
+            }
+        }
+    }
 }

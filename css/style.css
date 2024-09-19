@@ -340,7 +340,7 @@ main {
 .body-nav {
   width: 0;
   z-index: 98;
-  position: relative;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1224,8 +1224,8 @@ main {
           align-items: center;
 }
 .footer-logo-link img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   -webkit-filter: contrast(150%);
           filter: contrast(150%);
 }
@@ -1439,6 +1439,344 @@ main {
   transition: all 1s ease;
 }
 
+.custom-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 62, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 99999;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.custom-modal > .body {
+  width: 320px;
+  height: 480px;
+  background: var(--color-yelow);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.custom-modal > .body > .closed {
+  font-weight: 500;
+  font-size: 60px;
+  position: absolute;
+  top: -60px;
+  right: -25px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  color: rgb(255, 255, 255);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.custom-modal > .body > .closed:hover {
+  color: red;
+  font-weight: 500;
+  -webkit-transform: scale(1.05) rotate(135deg);
+      -ms-transform: scale(1.05) rotate(135deg);
+          transform: scale(1.05) rotate(135deg);
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--color-black);
+}
+
+.modal-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  padding-bottom: 46px;
+}
+
+.modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 23px;
+}
+.modal-form > .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 26px;
+}
+.modal-form > .title h5 {
+  font-family: "Eraser";
+}
+
+.modal-form-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 23px;
+}
+.modal-form-input label {
+  font-family: "Uefa";
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  -webkit-filter: contrast(200%);
+          filter: contrast(200%);
+}
+.modal-form-input input[type=text] {
+  border: 1px solid var(--color-green);
+  font-size: 18px;
+  padding: 8px 13px;
+}
+.modal-form-input input[type=text]::-webkit-input-placeholder {
+  font-size: 11px;
+  font-style: italic;
+}
+.modal-form-input input[type=text]::-moz-placeholder {
+  font-size: 11px;
+  font-style: italic;
+}
+.modal-form-input input[type=text]:-ms-input-placeholder {
+  font-size: 11px;
+  font-style: italic;
+}
+.modal-form-input input[type=text]::-ms-input-placeholder {
+  font-size: 11px;
+  font-style: italic;
+}
+.modal-form-input input[type=text]::placeholder {
+  font-size: 11px;
+  font-style: italic;
+}
+.modal-form-input input[type=submit] {
+  height: 46px;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: var(--color-yelow);
+  background: var(--color-green);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.modal-form-input input[type=submit]:hover {
+  -webkit-filter: blur(1px) saturate(30%);
+          filter: blur(1px) saturate(30%);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+}
+
+.modal-none {
+  display: none;
+}
+
+.success-message {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.success-message > .title {
+  margin-bottom: 23px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.success-message > .subtitle {
+  font-size: 16px;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: rgb(100, 92, 85);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 26px;
+}
+.success-message > .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 23px;
+}
+
+.custom-modal-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  width: 150px;
+  height: 80px;
+  background: var(--color-green);
+  border: 10px solid var(--color-green);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-white);
+  border: 5px solid var(--color-white);
+  -webkit-box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 21px 66px 0px rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.custom-modal-btn img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: -50px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 99;
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+}
+.custom-modal-btn:hover {
+  width: 155px;
+  height: 85px;
+}
+.custom-modal-btn:hover img {
+  width: 90px;
+  height: 90px;
+  right: 80px;
+  -webkit-animation: none;
+          animation: none;
+}
+.custom-modal-btn p {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: serif;
+  font-family: "Uefa";
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 20px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  -webkit-filter: contrast(200%);
+          filter: contrast(200%);
+  color: var(--color-white);
+  margin-bottom: 0;
+}
+.custom-modal-btn p > span {
+  font-family: "Eraser";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .item-animation-objects {
   opacity: 0;
   -webkit-transform: translateX(-20px);
@@ -1540,6 +1878,14 @@ main {
         -ms-flex-align: center;
             align-items: center;
   }
+  .custom-modal {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .custom-modal > .body {
+    margin-top: 100px;
+  }
 }
 @media (max-width: 768px) {
   .header {
@@ -1583,6 +1929,15 @@ main {
   .about-content-content {
     width: 90%;
   }
+  .modal-title {
+    font-size: 14px;
+  }
+  .modal-subtitle {
+    font-size: 10px;
+  }
+  .modal-form {
+    margin-top: 0;
+  }
 }
 @media (max-width: 460px) {
   .first-screen-right-title h2 {
@@ -1595,7 +1950,7 @@ main {
     width: 100%;
   }
   .about-content {
-    min-height: 1500px;
+    min-height: 1200px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1611,23 +1966,14 @@ main {
     width: 90%;
   }
   .about-content-content > .about-img {
-    width: 210px;
-    height: 297px;
+    width: 187px;
+    height: 277px;
     left: 10%;
   }
-  .about-content-content > .about-img:nth-child(2) {
-    top: 12%;
-    left: 25%;
-    -webkit-transform: rotate(5deg);
-        -ms-transform: rotate(5deg);
-            transform: rotate(5deg);
-  }
-  .about-content-content > .about-img:last-child {
-    top: 8%;
-    left: 15%;
-    -webkit-transform: rotate(0);
-        -ms-transform: rotate(0);
-            transform: rotate(0);
+  .about-img.third {
+    -webkit-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+            transform: translateX(15px);
   }
   .review-cards {
     -webkit-box-orient: vertical;
@@ -1652,5 +1998,88 @@ main {
   .review-btn {
     height: 40px;
     width: 100%;
+  }
+  .trainer-content-card {
+    width: 100%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .trainer-content-card-img {
+    margin-top: 26px;
+  }
+  .schedule-content {
+    margin-top: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .blog-content {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .footer-logo {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 76px;
+    border-bottom: 1px solid var(--color-yelow);
+  }
+  .footer-logo-link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-icons {
+    margin-top: 36px;
+  }
+  .footer-working {
+    width: 176px;
+  }
+  .footer-working h6, .footer-working p, .footer-working span, .footer-working a {
+    color: var(--color-yelow);
+    padding-bottom: 22px;
+  }
+  .footer-working h6 {
+    font-weight: 400;
+  }
+  .footer-working p, .footer-working a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25.5px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    padding-bottom: 22px;
+    font-family: "Uefa";
+  }
+  .footer-working p > span, .footer-working a > span {
+    font-weight: 700;
+    padding-bottom: 22px;
+    padding-right: 22px;
   }
 }

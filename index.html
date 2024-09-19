@@ -27,8 +27,8 @@
                     <li class="header-list-item header-effect block item-animation-objects" ><a href="#about">О нас</a></li>
                     <li class="header-list-item header-effect block item-animation-objects"><a href="#reviews">Отзывы</a></li>
                     <li class="header-list-item header-effect block item-animation-objects"><a href="#trainer">Тренеры</a></li>
-                    <li class="header-list-item header-effect block item-animation-objects"><a href="#">Расписание</a></li>
-                    <li class="header-list-item header-effect block item-animation-objects"><a href="#">Новости</a></li>
+                    <li class="header-list-item header-effect block item-animation-objects"><a href="#schedule">Расписание</a></li>
+                    <li class="header-list-item header-effect block item-animation-objects"><a href="#blog">Новости</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,8 +48,8 @@
                     <li class='body-nav-menu-list item-animation-objects'><a href="#about">О нас</a></li>
                     <li class='body-nav-menu-list item-animation-objects'><a href="#reviews">Отзывы</a></li>
                     <li class="body-nav-menu-list item-animation-objects"><a href="#trainer">Тренеры</a></li>
-                    <li class='body-nav-menu-list item-animation-objects'><a href="#">Расписание</a></li>
-                    <li class='body-nav-menu-list item-animation-objects'><a href="#">Новости</a></li>
+                    <li class='body-nav-menu-list item-animation-objects'><a href="#schedule">Расписание</a></li>
+                    <li class='body-nav-menu-list item-animation-objects'><a href="#blog">Новости</a></li>
                 </ul>
             </nav>
             <div class="header-list logotype-mobil nav-animation">
@@ -374,9 +374,108 @@
              <a class="custom-btn" href="{% url 'blogs' %}">показать еще</a>    
             </div> 
          </section>
-
-
-        
+         <div class="custom-modal modal-none" id="custom-modal">
+            <div class="body">
+                <p class="closed">+</p>
+                <form class="modal-form" id="client-form" action="{% url 'submit_form' %}" data-action-url="{% url 'submit_form' %}">
+                    
+                <div class="title">
+                    <h5 class="modal-title">Записаться на тренировку</h5>
+                </div>
+                    <div class="modal-form-input">
+                        <label for="userName">Ваше имя</label>
+                        <input placeholder="напр. Иван Иванович" type="text" name="userName" id="userName" required>
+                    </div>
+                    <div class="modal-form-input">
+                        <label for="userPhone">Номер для связи</label>
+                        <input placeholder="+7(9xx)xxx-xx-xx" type="text" name="userPhone" id='userPhone'>
+                    </div>
+                    <div class="modal-form-input">
+                        <label for="userSity">Адрес электронной почты</label>
+                        <input placeholder="напр. Краснодар" type="text" name="userSity" id="userSity">
+                    </div>
+                    <div class="modal-form-input">
+                        <input type="submit" placeholder="Отправить">
+                    </div>
+                    
+                </form>
+                <div class="success-message" id="success-message" style="display:none;">
+                    <p class="title">Спасибо!</p>
+                    <p class="subtitle">Не хотите ждать пока мы Вам перезвоним?</p>
+                    <div class="contact">
+                        <a class="circle" href="https://wa.me/79384796301">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a class="circle" href="tel:+79384796301">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                    <p class="subtitle">присоединяйтесь к нашм в ВК и телеграмм</p>
+                    <div class="contact">
+                        <a class="circle" href="#">
+                            <i class="fa-brands fa-telegram"></i> 
+                        </a>
+                        <a class="circle" href="tel:+79384796301">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-modal-btn">
+            <button class="custom-modal-btn" onclick="openModalWindow()">
+                <img src="./img/ball.png" alt="ball">
+                <p><span>GO! </span><br> на тренировку</p>
+            </button>
+        </div>
+        <!-- <div class="custom-modal modal-none" id="custom-modal">
+            <div class="body">
+                <p class="closed">+</p>
+                <form class="modal-form" id="client-form" action="{% url 'submit_form' %}" data-action-url="{% url 'submit_form' %}">
+                    
+                <div class="title">
+                    <h5 class="modal-title">Записаться на тренировку</h5>
+                </div>
+                    <div class="modal-form-input">
+                        <label for="userName">Ваше имя</label>
+                        <input placeholder="напр. Иван Иванович" type="text" name="userName" id="userName" required>
+                    </div>
+                    <div class="modal-form-input">
+                        <label for="userPhone">Номер для связи</label>
+                        <input placeholder="+7(9xx)xxx-xx-xx" type="text" name="userPhone" id='userPhone'>
+                    </div>
+                    <div class="modal-form-input">
+                        <label for="userSity">Адрес электронной почты</label>
+                        <input placeholder="напр. Краснодар" type="text" name="userSity" id="userSity">
+                    </div>
+                    <div class="modal-form-input">
+                        <input type="submit" placeholder="Отправить">
+                    </div>
+                    
+                </form>
+                <div class="success-message" id="success-message" style="display:none;">
+                    <p class="title">Спасибо!</p>
+                    <p class="subtitle">Не хотите ждать пока мы Вам перезвоним?</p>
+                    <div class="contact">
+                        <a class="circle" href="https://wa.me/79384796301">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a class="circle" href="tel:+79384796301">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                    <p class="subtitle">присоединяйтесь к нашм в ВК и телеграмм</p>
+                    <div class="contact">
+                        <a class="circle" href="#">
+                            <i class="fa-brands fa-telegram"></i> 
+                        </a>
+                        <a class="circle" href="tel:+79384796301">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </main>
 
     <footer class="footer" id="footer">
@@ -384,7 +483,7 @@
             <div class="footer-logo">
                 <a class="footer-logo-link" href="https://poolkuban.ru">
                     <img src="./img/logotype2.png" alt="">
-                    <h6>Атлант</h6>
+                    <h6>Футбольный клуб "Атлант"</h6>
                 </a>
                 <div class="footer-icons">
                     <a href="#">
@@ -404,22 +503,20 @@
                     <p>Навигация:</p>
                     <nav>
                         <ul>
-                            <li class="header-effect block"><a href="{% url 'about' %}">О нас</a></li>
-                            <li class="header-effect block"><a href="{% url 'blogs' %}">Истории</a></li>
-                            <li class="header-effect block"><a href="#">shop</a></li>
-                            <li class="header-effect block"><a href="#">services</a></li>
-                            <li class="header-effect block"><a href="#">contact</a></li>
+                            <li class="header-effect block"><a href="#about">О нас</a></li>
+                            <li class="header-effect block"><a href="#reviews">Отзывы</a></li>
+                            <li class="header-effect block"><a href="#trainer">Тренеры</a></li>
+                            <li class="header-effect block"><a href="#schedule">Расписание</a></li>
+                            <li class="header-effect block"><a href="#blog">Новости</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="footer-body-explorer">
                     <p>Информация:</p>
                         <ul>
-                            <li class="header-effect block"><a href="#">home</a></li>
-                            <li class="header-effect block"><a href="#">blog</a></li>
-                            <li class="header-effect block"><a href="#">shop</a></li>
-                            <li class="header-effect block"><a href="#">services</a></li>
-                            <li class="header-effect block"><a href="#">contact</a></li>
+                            <li class="header-effect block"><a href="#">404</a></li>
+                            <li class="header-effect block"><a href="#">Политика конфиденциальности</a></li>
+                            <li class="header-effect block"><a href="#">Лицензионное соглашение</a></li>
                         </ul>
                 </div>
                 <div class="footer-address">
@@ -435,12 +532,14 @@
             </div>
         </div>
         <div class="copyright">
-           &copy; &nbsp;&nbsp;2024 &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; 
+           &copy; &nbsp;&nbsp;2024 &nbsp;&nbsp; Футбольный клуб "Атлант" &nbsp;&nbsp; &nbsp;&nbsp; 
         </div>
     </footer>
     <script src="./script/script.js"></script>
     <script src="./script/recordSlider.js"></script>
     <script src="./script/reviewSlider.js"></script>
     <script src="./script/mobilNav.js"></script>
+    <script src="./script/scrollToTop.js"></script>
+    <script src="./script/customModal.js"></script>
 </body>
 </html>

@@ -59,12 +59,20 @@ const slideShowBackground = () =>{
 
 const reverseBlock =() => {
     
+    if (window.innerWidth < 468) {
+        elementReverse.forEach((e) => {
+            
+                e.style.flexDirection = 'column';
+            
+        })
+    } else {
+        elementReverse.forEach((e, index) => {
+            if ((index + 1) % 2 === 0) {
+                e.style.flexDirection = 'row-reverse';
+            }
+        })
+    }
 
-    elementReverse.forEach((e, index) => {
-        if ((index + 1) % 2 === 0) {
-            e.style.flexDirection = 'row-reverse';
-        }
-    }) 
 }
 
 
